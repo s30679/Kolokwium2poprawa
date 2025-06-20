@@ -15,4 +15,5 @@ public class Race
     
     [Required]
     public DateTime Date { get; set; }
+    public ICollection<Track_Race> TrackRaces { get; set; }
 }

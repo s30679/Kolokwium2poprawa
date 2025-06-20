@@ -12,4 +12,5 @@ public class Racer
     
     [Required, MaxLength(100)]
     public string LastName { get; set; }
+    public ICollection<Race_Participation> RaceParticipations { get; set; }
 }

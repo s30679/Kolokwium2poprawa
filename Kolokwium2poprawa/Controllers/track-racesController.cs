@@ -7,11 +7,11 @@ namespace Kolokwium2poprawa.Controllers;
 [Route("api/[controller]")]
 public class track_racesController
 {
-    private readonly IMyService _myService;
+    private readonly IRacersService _racersService;
 
-    public track_racesController(IMyService myService)
+    public track_racesController(IRacersService racersService)
     {
-        _myService = myService;
+        _racersService = racersService;
     }
     // [HttpPost("participants")]
     // public async Task<IActionResult> PostAsync([FromBody] cos, CancellationToken cancellationToken)

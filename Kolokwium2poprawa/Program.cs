@@ -23,7 +23,7 @@ public class Program
         {
             optionsBuilder.UseSqlServer(connectionString);
         });
-        builder.Services.AddScoped<IMyService, MyService>();
+        builder.Services.AddScoped<IRacersService, RacersService>();
         
 
         var app = builder.Build();

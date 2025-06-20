@@ -12,4 +12,5 @@ public class Track
     
     [Required]
     public decimal LengthInKm { get; set; }
+    public ICollection<Track_Race> TrackRaces { get; set; }
 }

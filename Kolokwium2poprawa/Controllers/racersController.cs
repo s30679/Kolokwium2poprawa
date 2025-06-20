@@ -7,16 +7,22 @@ namespace Kolokwium2poprawa.Controllers;
 [Route("api/[controller]")]
 public class racersController : ControllerBase
 {
-    private readonly IMyService _myService;
+    private readonly IRacersService _racersService;
 
-    public racersController(IMyService myService)
+    public racersController(IRacersService racersService)
     {
-        _myService = myService;
+        _racersService = racersService;
     }
 
-    // [HttpGet("{Id}/participations")]
-    // public async Task<IActionResult> GetByIdAsync(int Id, CancellationToken cancellationToken)
-    // {
-    //     
-    // }
+    [HttpGet("{Id}/participations")]
+    public async Task<IActionResult> GetRacerByIdAsync(int Id, CancellationToken cancellationToken)
+    {
+        var racer = await _racersService.GetRacerByIdAsync(Id, cancellationToken);
+        if (racer == null)
+        {
+            return NotFound();
+        }
+        return Ok(racer);    
+    }
+    
 }

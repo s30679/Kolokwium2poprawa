@@ -24,4 +24,6 @@ public class Track_Race
     
     [ForeignKey(nameof(RaceId))]
     public Race Race { get; set; }
+    
+    public ICollection<Race_Participation> RaceParticipations { get; set; }
 }
