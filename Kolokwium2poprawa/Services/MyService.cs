@@ -4,9 +4,9 @@ namespace Kolokwium2poprawa.Services;
 
 public class MyService : IMyService
 {
-    private readonly MyDbContext _dbcontext;
+    private readonly RacesDbContext _dbcontext;
 
-    public MyService(MyDbContext dbcontext)
+    public MyService(RacesDbContext dbcontext)
     {
         _dbcontext = dbcontext;
     }
